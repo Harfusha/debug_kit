@@ -68,7 +68,7 @@ class Panel extends Entity
      * @param mixed $content Content
      * @return mixed
      */
-    protected function _setContent(mixed $content): mixed
+    protected function _setContent($content)
     {
         if (is_string($content) && function_exists('gzdeflate')) {
             $contentDeflated = gzdeflate($content, 9);
